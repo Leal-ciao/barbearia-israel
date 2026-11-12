@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BarberDesk</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{background:#f3f5f2;color:#252b27}
+nav{background:#203b30;color:white;padding:20px}
+nav h1 span{color:#c6a36a}
+nav a{color:white;text-decoration:none;margin:15px 10px 0 0;display:inline-block}
+main{padding:25px;max-width:1000px;margin:auto}
+header{margin-bottom:20px}
+header p,.cliente p,.cliente-card p{color:#777;font-size:13px;margin-top:5px}
+.resumo,.clientes{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.card,.secao{background:white;padding:18px;border-radius:8px;margin-bottom:15px;flex:1}
+.card h3{font-size:13px;color:#777}
+.card strong{font-size:24px;color:#203b30}
+.secao h2{font-size:18px;margin-bottom:15px}
+.agendamento{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid #eee;flex-wrap:wrap}
+.cliente h3,.cliente-card h3{font-size:14px}
+.horario{font-weight:bold;color:#203b30}
+.status{font-size:11px;padding:5px 8px;border-radius:12px}
+.confirmado{background:#e3f1e6;color:#347447}
+.aguardando{background:#fff1d8;color:#987020}
+.concluido{background:#eee;color:#666}
+.remover{position:absolute;opacity:0}
+.excluir{background:#f9e7e7;color:#b53b3b;padding:7px;border-radius:5px;cursor:pointer;font-size:12px}
+.remover:checked+.agendamento{display:none}
+.cliente-card{background:#f8f9f7;padding:12px;border-radius:7px;flex:1;min-width:150px}
+footer{text-align:center;color:#777;font-size:12px;padding:15px}
+</style>
+</head>
+<body>
+<nav>
+<h1>Barber<span>Desk</span></h1>
+<p>Gerenciamento de barbearia</p>
+<a href="#inicio">Início</a>
+<a href="#agendamentos">Agendamentos</a>
+<a href="#clientes">Clientes</a>
+</nav>
+
+<main>
+<header id="inicio">
+<h2>Visão geral</h2>
+<p>Bem-vindo ao painel da barbearia!</p>
+</header>
+
+<section class="resumo">
+<div class="card"><h3>Agendamentos hoje</h3><strong>04</strong></div>
+<div class="card"><h3>Clientes atendidos</h3><strong>01</strong></div>
+<div class="card"><h3>Horários disponíveis</h3><strong>04</strong></div>
+</section>
+
+<section class="secao" id="agendamentos">
+<h2>Agendamentos de hoje</h2>
+
+<input type="checkbox" class="remover" id="a1">
+<div class="agendamento">
+<div class="cliente"><h3>Pedro Henrique</h3><p>Corte de cabelo</p></div>
+<span class="horario">09:00</span>
+<span class="status confirmado">Confirmado</span>
+<label for="a1" class="excluir">Excluir</label>
+</div>
+
+<input type="checkbox" class="remover" id="a2">
+<div class="agendamento">
+<div class="cliente"><h3>Lucas Oliveira</h3><p>Barba</p></div>
+<span class="horario">10:30</span>
+<span class="status aguardando">Aguardando</span>
+<label for="a2" class="excluir">Excluir</label>
+</div>
+
+<input type="checkbox" class="remover" id="a3">
+<div class="agendamento">
+<div class="cliente"><h3>Gabriel Santos</h3><p>Corte e barba</p></div>
+<span class="horario">13:00</span>
+<span class="status concluido">Concluído</span>
+<label for="a3" class="excluir">Excluir</label>
+</div>
+</section>
+
+<section class="secao" id="clientes">
+<h2>Clientes cadastrados</h2>
+<div class="clientes">
+<div class="cliente-card"><h3>Pedro Henrique</h3><p>(83) 99999-1111</p></div>
+<div class="cliente-card"><h3>Lucas Oliveira</h3><p>(83) 99999-2222</p></div>
+<div class="cliente-card"><h3>Gabriel Santos</h3><p>(83) 99999-3333</p></div>
+</div>
+</section>
+
+<footer>BarberDesk © 2026</footer>
+</main>
+</body>
+</html>
