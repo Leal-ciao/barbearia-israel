@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel do Barbeiro</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="logo">
+            <span>✂</span>
+            <h1>BarberControl</h1>
+        </div>
+
+        <div class="perfil">
+            <div class="foto-perfil">JS</div>
+
+            <div>
+                <strong>João Silva</strong>
+                <small>Barbeiro</small>
+            </div>
+        </div>
+    </header>
+
+    <div class="layout">
+
+        <aside class="menu-lateral">
+            <nav>
+                <a href="#inicio" class="menu-ativo">
+                    <span>⌂</span>
+                    Início
+                </a>
+
+                <a href="#agendamentos">
+                    <span>▣</span>
+                    Agendamentos
+                </a>
+
+                <a href="#clientes">
+                    <span>♙</span>
+                    Clientes
+                </a>
+
+                <a href="#horarios">
+                    <span>◷</span>
+                    Horários
+                </a>
+
+                <a href="#configuracoes">
+                    <span>⚙</span>
+                    Configurações
+                </a>
+            </nav>
+
+            <div class="ajuda">
+                <strong>Precisa de ajuda?</strong>
+                <p>Consulte o suporte da plataforma.</p>
+                <a href="#suporte">Acessar suporte</a>
+            </div>
+        </aside>
+
+        <main class="conteudo" id="inicio">
+
+            <section class="cabecalho-pagina">
+                <div>
+                    <p class="saudacao">Olá, João!</p>
+                    <h2>Resumo do seu dia</h2>
+                    <p class="subtitulo">
+                        Confira seus agendamentos e organize sua rotina.
+                    </p>
+                </div>
+
+                <a href="#novo-horario" class="botao-principal">
+                    + Novo horário
+                </a>
+            </section>
+
+            <section class="cards-resumo">
+
+                <article class="card-resumo">
+                    <div class="icone-card azul">▣</div>
+
+                    <div>
+                        <p>Agendamentos hoje</p>
+                        <strong>8</strong>
+                    </div>
+
+                    <span class="variacao positiva">+2</span>
+                </article>
+
+                <article class="card-resumo">
+                    <div class="icone-card verde">✓</div>
+
+                    <div>
+                        <p>Atendidos</p>
+                        <strong>4</strong>
+                    </div>
+
+                    <span class="variacao positiva">50%</span>
+                </article>
+
+                <article class="card-resumo">
+                    <div class="icone-card laranja">◷</div>
+
+                    <div>
+                        <p>Horários livres</p>
+                        <strong>3</strong>
+                    </div>
+
+                    <span class="variacao neutra">Hoje</span>
+                </article>
+
+                <article class="card-resumo">
+                    <div class="icone-card roxo">♙</div>
+
+                    <div>
+                        <p>Total de clientes</p>
+                        <strong>126</strong>
+                    </div>
+
+                    <span class="variacao positiva">+8%</span>
+                </article>
+
+            </section>
+
+            <section class="area-principal">
+
+                <div class="painel agendamentos" id="agendamentos">
+                    <div class="titulo-painel">
+                        <div>
+                            <h3>Agendamentos de hoje</h3>
+                            <p>Quarta-feira, 12 de novembro</p>
+                        </div>
+
+                        <a href="#todos-agendamentos">Ver todos</a>
+                    </div>
+
+                    <div class="lista-agendamentos">
+
+                        <article class="agendamento">
+                            <div class="horario">
+                                <strong>09:00</strong>
+                                <span>30 min</span>
+                            </div>
+
+                            <div class="linha"></div>
+
+                            <div class="informacoes-cliente">
+                                <div class="avatar cliente-azul">MC</div>
+
+                                <div>
+                                    <strong>Marcos Costa</strong>
+                                    <span>Corte degradê</span>
+                                </div>
+                            </div>
+
+                            <span class="status confirmado">Confirmado</span>
+
+                            <a href="#detalhes-marcos" class="botao-detalhes">
+                                Detalhes
+                            </a>
+                        </article>
+
+                        <article class="agendamento">
+                            <div class="horario">
+                                <strong>10:00</strong>
+                                <span>45 min</span>
+                            </div>
+
+                            <div class="linha"></div>
+
+                            <div class="informacoes-cliente">
+                                <div class="avatar cliente-verde">RL</div>
+
+                                <div>
+                                    <strong>Rafael Lima</strong>
+                                    <span>Barba e cabelo</span>
+                                </div>
+                            </div>
+
+                            <span class="status confirmado">Confirmado</span>
+
+                            <a href="#detalhes-rafael" class="botao-detalhes">
+                                Detalhes
+                            </a>
+                        </article>
+
+                        <article class="agendamento">
+                            <div class="horario">
+                                <strong>11:30</strong>
+                                <span>30 min</span>
+                            </div>
+
+                            <div class="linha"></div>
+
+                            <div class="informacoes-cliente">
+                                <div class="avatar cliente-laranja">PA</div>
+
+                                <div>
+                                    <strong>Pedro Alves</strong>
+                                    <span>Corte social</span>
+                                </div>
+                            </div>
+
+                            <span class="status aguardando">Aguardando</span>
+
+                            <a href="#detalhes-pedro" class="botao-detalhes">
+                                Detalhes
+                            </a>
+                        </article>
+
+                        <article class="agendamento">
+                            <div class="horario">
+                                <strong>14:00</strong>
+                                <span>60 min</span>
+                            </div>
+
+                            <div class="linha"></div>
+
+                            <div class="informacoes-cliente">
+                                <div class="avatar cliente-roxo">GS</div>
+
+                                <div>
+                                    <strong>Gabriel Santos</strong>
+                                    <span>Platinado</span>
+                                </div>
+                            </div>
+
+                            <span class="status confirmado">Confirmado</span>
+
+                            <a href="#detalhes-gabriel" class="botao-detalhes">
+                                Detalhes
+                            </a>
+                        </article>
+
+                    </div>
+                </div>
+
+                <div class="painel proximo-cliente">
+                    <div class="titulo-painel">
+                        <div>
+                            <h3>Próximo cliente</h3>
+                            <p>Seu próximo atendimento</p>
+                        </div>
+
+                        <span class="icone-relogio">◷</span>
+                    </div>
+
+                    <div class="cliente-destaque">
+                        <div class="avatar avatar-grande cliente-azul">MC</div>
+
+                        <h3>Marcos Costa</h3>
+                        <p>Corte degradê</p>
+
+                        <div class="horario-destaque">
+                            <strong>09:00</strong>
+                            <span>Hoje</span>
+                        </div>
+
+                        <div class="botoes-cliente">
+                            <a href="#iniciar-atendimento" class="botao-principal">
+                                Iniciar atendimento
+                            </a>
+
+                            <a href="#cancelar" class="botao-secundario">
+                                Cancelar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="painel tabela-clientes" id="clientes">
+                <div class="titulo-painel">
+                    <div>
+                        <h3>Clientes recentes</h3>
+                        <p>Últimos clientes cadastrados</p>
+                    </div>
+
+                    <a href="#todos-clientes">Ver todos</a>
+                </div>
+
+                <div class="tabela-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Cliente</th>
+                                <th>Telefone</th>
+                                <th>Último serviço</th>
+                                <th>Data</th>
+                                <th>Ação</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="cliente-tabela">
+                                        <div class="avatar pequeno cliente-azul">MC</div>
+                                        Marcos Costa
+                                    </div>
+                                </td>
+
+                                <td>(11) 99999-1234</td>
+                                <td>Corte degradê</td>
+                                <td>Hoje</td>
+                                <td>
+                                    <a href="#ver-cliente" class="link-acao">
+                                        Visualizar
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="cliente-tabela">
+                                        <div class="avatar pequeno cliente-verde">RL</div>
+                                        Rafael Lima
+                                    </div>
+                                </td>
+
+                                <td>(11) 98888-5678</td>
+                                <td>Barba e cabelo</td>
+                                <td>Hoje</td>
+                                <td>
+                                    <a href="#ver-cliente" class="link-acao">
+                                        Visualizar
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="cliente-tabela">
+                                        <div class="avatar pequeno cliente-laranja">PA</div>
+                                        Pedro Alves
+                                    </div>
+                                </td>
+
+                                <td>(11) 97777-2468</td>
+                                <td>Corte social</td>
+                                <td>Ontem</td>
+                                <td>
+                                    <a href="#ver-cliente" class="link-acao">
+                                        Visualizar
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="painel horarios" id="horarios">
+                <div class="titulo-painel">
+                    <div>
+                        <h3>Disponibilidade de hoje</h3>
+                        <p>Controle dos horários livres e ocupados</p>
+                    </div>
+                </div>
+
+                <div class="grade-horarios">
+                    <div class="horario-livre">
+                        <span>08:00</span>
+                        <strong>Livre</strong>
+                    </div>
+
+                    <div class="horario-ocupado">
+                        <span>09:00</span>
+                        <strong>Ocupado</strong>
+                    </div>
+
+                    <div class="horario-ocupado">
+                        <span>10:00</span>
+                        <strong>Ocupado</strong>
+                    </div>
+
+                    <div class="horario-livre">
+                        <span>11:00</span>
+                        <strong>Livre</strong>
+                    </div>
+
+                    <div class="horario-livre">
+                        <span>13:00</span>
+                        <strong>Livre</strong>
+                    </div>
+
+                    <div class="horario-ocupado">
+                        <span>14:00</span>
+                        <strong>Ocupado</strong>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>BarberControl © 2026 - Sistema de organização para barbeiros</p>
+    </footer>
+
+</body>
+</html>
